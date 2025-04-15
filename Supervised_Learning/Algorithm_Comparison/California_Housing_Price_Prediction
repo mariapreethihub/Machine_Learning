@@ -1,0 +1,55 @@
+California Housing Price Prediction
+
+#1.Overview
+   This project aims to predict the median house values in California using the California Housing Dataset. 
+   The dataset contains various features such as the average number of rooms, the median income of the area, and more. 
+   Using these features, we build and evaluate multiple machine learning models to predict house prices.
+
+#2.Dataset
+   The dataset used in this project is the California Housing Dataset, which is available in the sklearn library. 
+    It contains information on:
+    •	MedInc (Median Income in the block)
+    •	HouseAge (Age of the house)
+    •	AveRooms (Average number of rooms)
+    •	AveBedrms (Average number of bedrooms)
+    •	Population (Population in the block)
+    •	AveOccup (Average occupancy)
+    •	Latitude & Longitude (Geographical information)
+    •	MedHouseVal (Median house value in USD)
+
+#3.Steps Involved
+  1.	Loading the Data:
+      -We use the fetch_california_housing() function from scikit-learn to load the dataset.
+      -The dataset is converted into a pandas DataFrame for easier handling.
+
+  2.	Find the Correlation between features 
+      The highly correlated variables and variable that does not contribute much to target is removed
+  
+  3. Data Preprocessing:
+     a.Checking for Missing Values: The dataset doesn't contain missing values. The same is checked using the function isnull().sum().
+     b.Duplicate Row Checking: There are no duplicate rows in the dataset.
+     c.Handled Outliers: Identified and clipped outliers using IQR method.
+     d.Checking Skewness: Checked the skewness of numerical features. For the feature MedInc and AveRooms log transformation is applied to make it more normally distributed.
+     e.Feature Scaling:To improve the performance of models and to standardize the numerical features to have a mean of 0 and a standard deviation of 1 scaling is done.
+  
+  4.	Model Building: We implement the following regression algorithms:
+     1.Linear Regression: A simple algorithm that assumes a linear relationship between the features and the target variable.
+     2.Decision Tree Regressor: A non-linear model that splits the data into decision nodes to make predictions.
+     3.Random Forest Regressor: An ensemble method that combines multiple decision trees to improve prediction accuracy.
+     4.Gradient Boosting Regressor: Another ensemble method that builds trees sequentially, each learning from the mistakes of the previous one.
+     5.Support Vector Regressor (SVR): A model that finds a hyperplane to maximize the margin between data points, ideal for higher-dimensional data.
+
+  5.Model Evaluation: We evaluate the performance of each model using the following metrics:
+     1.Mean Squared Error (MSE)
+     2.Mean Absolute Error (MAE)
+     3.R-squared (R²)
+   These metrics help us understand how well the model is predicting the house prices and how close the predictions are to 
+   the actual values.
+
+  6.Results:
+   After evaluating each model, we compare their performance and identify the best-performing algorithm and
+   identified the worst-performing model and provide reasoning for its performance.
+
+#4.Conclusion
+The goal of this project is to demonstrate how various machine learning models can be used to predict housing prices. 
+By comparing multiple models, we can choose the one that works best for our dataset and achieve better prediction accuracy.
