@@ -29,7 +29,7 @@ California Housing Price Prediction
      a.Checking for Missing Values: The dataset doesn't contain missing values. The same is checked using the function isnull().sum().
      b.Duplicate Row Checking: There are no duplicate rows in the dataset.
      c.Handled Outliers: Identified and clipped outliers using IQR method.
-     d.Checking Skewness: Checked the skewness of numerical features. For the feature MedInc and AveRooms log transformation is applied to make it more normally distributed.
+     d.Checking Skewness: Checked the skewness of numerical features. For the feature MedInc log transformation is applied to make it more normally distributed.
      e.Feature Scaling:To improve the performance of models and to standardize the numerical features to have a mean of 0 and a standard deviation of 1 scaling is done.
   
   4.	Model Building: We implement the following regression algorithms:
