@@ -1,0 +1,57 @@
+Breast Cancer Classification
+#1. Overview
+This project aims to classify whether a tumor is malignant or benign using the Breast Cancer dataset available in scikit-learn.
+The dataset contains features computed from digitized images of breast mass FNA (fine needle aspirate) tests, such as radius, texture, perimeter, and more.
+Multiple classification algorithms are built and evaluated to determine which model performs best in diagnosing breast cancer.
+
+#2. Dataset
+The dataset used is the Breast Cancer Dataset from the sklearn.datasets module.
+It contains 30 numeric features and a target.
+
+
+#3. Steps Involved
+1. Loading the Data
+a.Loaded the dataset using load_breast_cancer() from sklearn
+b.Converted to a pandas DataFrame for ease of analysis
+
+2. Feature Selection based on Correlation
+a.Calculated correlation of all features with the target
+b.Dropped features with correlation < 0.1
+c.Removed features with high inter-correlation (correlation > 0.9) to reduce redundancy
+
+3. Data Preprocessing
+a. Missing Values: Checked using isnull().sum(). None found
+b. Duplicates: Verified there were no duplicate rows
+c. Feature Scaling: Applied StandardScaler to normalize the features
+d. Splitting: Data split into training (80%) and testing (20%) sets using train_test_split()
+
+4. Model Building
+Implemented the following classification algorithms:
+ a.Logistic Regression: A linear model for binary classification
+ b.Decision Tree Classifier: Tree-based model that splits data into rules
+ c.Random Forest Classifier: Ensemble of decision trees for better accuracy
+ d.Support Vector Classifier (SVC): Finds optimal boundary with max margin
+ e.K-Nearest Neighbors (KNN): Classifies based on nearest data points
+
+5. Model Evaluation
+Evaluated all models using the following classification metrics:
+a.Accuracy
+b Precision
+c.Recall
+d.F1-score
+
+These help in assessing how well each model detects cancer correctly and minimizes false results.
+
+6. Results
+All models performed well, with Logistic Regression showing the highest accuracy and F1-score
+Decision Tree had slightly lower performance, possibly due to overfitting.
+
+Summary table of results was generated and printed for comparison
+
+Best model: Logistic Regression (based on accuracy & F1-score)
+Worst model: Decision Tree (relatively lower metrics)
+
+#4. Conclusion
+This project demonstrates how classification models can be used for early breast cancer detection.
+Using correlation analysis and model evaluation techniques, we improved model performance and selected the best approach.
+Such machine learning models can be used for faster diagnosis and more accurate decisions.
