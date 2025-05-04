@@ -1,0 +1,41 @@
+# Iris Dataset Clustering - KMeans & Hierarchical Clustering
+
+## Objective
+
+This notebook demonstrates clustering techniques on the Iris dataset using:
+
+- KMeans Clustering
+- Hierarchical Clustering
+
+## Dataset
+
+- Dataset: Iris dataset from sklearn.datasets
+- Features in the dataset :sepal length, sepal width, petal length, petal width
+
+1️. KMeans Clustering
+
+- KMeans partitions data into `k` clusters based on distance to centroids.
+- Iris dataset has clear feature separation, making it ideal for cluster-based grouping.
+
+**Steps**
+  - Used Elbow method to choose optimal `k`
+  - Applied KMeans
+  - Visualized clusters using seaborn
+
+2️. Hierarchical Clustering
+
+- Builds a tree of clusters by merging closest pairs.It is ideal for small datasets and visual cluster exploration with dendrogram.
+
+**Steps**
+  - Used scipy to generate dendrogram
+  - Applied Agglomerative Clustering 
+  - Visualized final clusters
+
+
+
+---
+
+## ✅ Outcome
+
+- Both clustering methods successfully grouped the data.
+- Plots show meaningful separations, especially using petal-based features.
