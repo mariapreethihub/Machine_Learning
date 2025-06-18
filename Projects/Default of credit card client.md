@@ -131,15 +131,15 @@ In this step, the most important features were selected to improve the model's p
   - Based on evaluation results :
      - Random Forest Classifer has better evaluation score in terms of accuracy,precision score and F1 score.
      - Logisitic regression model was able to identify most of the defaulter.
-  - Other models were not selected due to lower evalaution scores compared to random forest and
-    Logistic Regression.
+  -Random Forest Classification model for prediction as the model shows a balanced performance across all metrics.
+
     
 ## Hyperparameter Tuning
   In this step, the models were tuned with best parameters to improve the evaluation metrics which inturn improve efficiency.
 
   - The method used for hypertuning is GridSearchCV. A parameter grid is passed to find the best parameter.
   - The model is retrained using best parameter obtained.
-  - Random Forest Classifier model performance has increased in terms of all paramters and hence selected for final predictions.
+  - Random Forest Classifier model performance has increased in terms of all paramters.
  ## Final Predictions
 
   - Final Predictions were made using the test dataset by passing selected input paramters.
@@ -157,14 +157,17 @@ In this step, the most important features were selected to improve the model's p
  - The dataset was highly imbalance and same is handling using SMOTE technique.
  - Early identification of defaulter helps Financial institutions to identify likely defaulter
    there by reducing the credit risk.
- - The model gives banks sufficient lead time to follow up with potential defaulters and take preventive actions, thereby reducing financial
-   risk.
+ - The model gives banks sufficient lead time to follow up with potential defaulters and take preventive actions, thereby reducing financial loss.
+   
+  ## Opportunities for Improvement
   
- - As a point for improvement customer behavioural features can be included. Also,advanced models may be
-   used for much more better performance.
- - The current model uses historical repayment behavior and billing information to predict defaults. However, it does not check if the minimum
-   payment made by the customer meets a specific threshold.
- - In real-world banking, minimum due amounts are often a fixed percentage of the credit limit or outstanding balance, and not paying this minimum
-   can be an early indicator that the customer is facing financial difficulty.
- - Including a feature that checks whether customer has consistently paid at least the minimum
-   due could enhance model's ability to identfy high risk customer.
+ - As a point for improvement customer behavioural features can be included.
+ - Also,advanced models may be used for much more better performance.
+ - The current model uses historical repayment behavior and billing information to predict defaults. However, it does not check if the minimum payment made by the customer meets a specific threshold.
+ - In real-world banking, minimum due amounts are often a fixed percentage of the credit limit or outstanding balance, and not paying this minimum can be an early indicator that the customer is facing financial difficulty.
+ - Including a feature that checks whether customer has consistently paid at least the minimum due could enhance model's ability to identfy high risk customer.
+ - Also,the current model tends to misclassify customers who have not utilized their credit limit at all as potential defaulters. This is due to a lack of sufficient training samples.
+ - To address this, the training data shoud be included with more examples of such “no usage” cases, or same has to be  handled separately before model prediction.
+
+
+
