@@ -5,7 +5,7 @@ This project aims to predict credit card payment defaulters using machine learni
 is of categorical in nature indicating whether a customer will default or not,a classification algorithm is used for prediction.
 
 ## Dataset Overview
-The dataset for this analysis is taken from UCI Machine Learning Repository. It contains 30000 instances and 23 features, 
+The dataset for this analysis is taken from UCI Machine Learning Repository. It contains 30000 instances and 25 features, 
 including the target variable. The target variables indicates the default status of credit card payment where 1=Default 
 and 0=No Default.Some features like sex,marriage and education are stored as integer but represents categorical variable.
 
